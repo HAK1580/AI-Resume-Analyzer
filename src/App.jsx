@@ -18,7 +18,7 @@ export const ResumeAnalyzer = () => {
   const [apiError, setApiError] = useState(null);
   const { control, register, handleSubmit, formState: { errors, isSubmitting } } = useForm();
 
- const API=import.meta.env.API_URL
+ const API=import.meta.env.API_URL || `http://localhost:5000`
 
   const onSubmit = async (formData) => {
     setApiError(null);
