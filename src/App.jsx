@@ -27,7 +27,7 @@ export const ResumeAnalyzer = () => {
 
     const data = new FormData();
     data.append('resume', formData.resume);
-    if (formData.jobDescription) {A
+    if (formData.jobDescription) {
       data.append('jobDescription', formData.jobDescription);
     }
 
@@ -206,7 +206,7 @@ export const ResumeAnalyzer = () => {
                       <span>{item}</span>
                     </li>
                   ))}
-                </ul>
+                </ul>``
               </div>
 
             </div>
