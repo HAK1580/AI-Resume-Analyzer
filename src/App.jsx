@@ -18,6 +18,8 @@ export const ResumeAnalyzer = () => {
   const [apiError, setApiError] = useState(null);
   const { control, register, handleSubmit, formState: { errors, isSubmitting } } = useForm();
 
+ const API=import.meta.env.API_URL
+
   const onSubmit = async (formData) => {
     setApiError(null);
     setAnalysisResult(null);
@@ -29,7 +31,7 @@ export const ResumeAnalyzer = () => {
     }
 
     try {
-      const response = await axios.post('http://localhost:5000/api/ai/analyze-resume', data, {
+      const response = await axios.post(`${API}/api/ai/analyze-resume`, data, {
         headers: { 'Content-Type': 'multipart/form-data' },
       });
       setAnalysisResult(response.data);
