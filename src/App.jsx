@@ -10,7 +10,8 @@ import {
   AlertCircle, 
   Sparkles, 
   Loader2, 
-  ArrowRight 
+  ArrowRight, 
+  Import
 } from 'lucide-react';
 
 export const ResumeAnalyzer = () => {
@@ -18,8 +19,8 @@ export const ResumeAnalyzer = () => {
   const [apiError, setApiError] = useState(null);
   const { control, register, handleSubmit, formState: { errors, isSubmitting } } = useForm();
 
- const API=import.meta.env.API_URL || `http://localhost:5000`
-
+  
+  const API= 'http://localhost:5000' || import.meta.env.VITE_API_URL
   const onSubmit = async (formData) => {
     setApiError(null);
     setAnalysisResult(null);
