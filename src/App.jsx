@@ -20,7 +20,7 @@ export const ResumeAnalyzer = () => {
   const { control, register, handleSubmit, formState: { errors, isSubmitting } } = useForm();
 
   
-  const API= 'http://localhost:5000' || import.meta.env.VITE_API_URL
+  const API= import.meta.env.VITE_API_URL
   const onSubmit = async (formData) => {
     setApiError(null);
     setAnalysisResult(null);
